@@ -1,0 +1,60 @@
+FLEXBOX - Flexible Box = Caja Flexible 
+- PAGINA PARA PROBAR 
+https://the-echoplex.net/flexyboxes/
+https://flexbox.help/
+
+10 Reglas de ORO FlexBox
+
+1- Flexbox necesita un padre y por lo menos un hijo
+   El ANCHO de acuerdo a la cantidad de contenido que tiene el hijo
+   El ALTO se adecua de acuerdo al padre
+2- El Flex Container (Padre) tiene dos ejes
+   Tiene dos ejes por defecto es el eje horizontal (ROW), secundario es de forma vertical (COLUMN)
+3- Podemos modificar el eje principal con la propiedad: 
+   Por defecto usa flex-direction:row;
+   Valores flex-direction:row, colum, row-reverse, column-reverse
+4- Podemos permitir el salto de columnas con flex-wrap: wrap y no-wrap
+   Por defecto usa nowrap;
+   Valores flex-wrap: wrap; nowrap;
+5- Alineamos los elmentos (hijos) en el eje principal con justify-content (Alinea los hijos en el eje principal)
+   Por defecto flex-start;
+   Valores justify-content: flex-start; flex-end; center; space-between; space-around;
+6- Alineamos los elementos (hijos) en el eje secundario con align-items
+   Por defecto stretch; (los hijos ocupa toda la alutra - todo el espacio del padre)
+   Valores align-items:stretch; flex-start; flex-end; center; baseline;(no se usa)
+7- Podemos alinear los elementos (Hijos) de forma individual en el eje secundario con align-self
+   Por defecto stretch; (sobrescribe el valor de align-items del (Padre) de forma individual)
+8- Los hijos flexibles (Hijos) ignoran propiedades como: float, clear, vertical-align
+9- Podemos modificar el tamaño de los hijos (Hijos) con flex-grow, flex-shrink, flex-basis
+   - Por defecto: El tamaño de los hijos se define por el tamaño de su contenido. (a mayor contenido mayor dimensión)
+   9.1)flex-grow:
+	Define el tamaño que crecerá un hijo, en relación a sus demás hermanos, 
+	"CUANDO HAY ESPACIO DISPONIBLE EN EL CONTENEDOR"
+	Por defecto: flex-grow:0;
+      	EJEMPLOS: Juana 2 - ana 1 meche 1
+	100 / 4 porciones
+        100 / 1 = todo para juana   - 1 tajada es todo
+        se distribuye entre los espacios sobrantes
+   9.2)flex-shrink:
+	Define el tamaño de reducción de un hijo en relación a sus demás hermanos,
+	"CUANDO FALTE ESPACIO EN EL CONTENEDOR"
+	Por defecto: flex-shrink:1;  (REDUCE POR DEFECTO  PARA ADAPTARSE A LA CAJA PADRE)
+	esta propiedad casi no se usa en un sitio real web
+   9.3)flex-basis:
+	Sirve para definir el tamaño INICIAL de las cajas
+	Por defecto: flex-basis:auto;
+	SIMILAR AL widht
+	flex-grow: 1; a todas las cajas
+	flex-basis:0; - a todas las cajas para que tenga el mismo tamaño todas las cajas a pesar de la cantidad del contenido
+10- Podemos resumir todo con la propiedad flex
+        flex: flex-grow flex-shrink flex-basis
+        flex: 1		1 	0px;	
+        flex: 1 0px;
+        flex: 1;  hace que flex-bases sea 0px  - da problema con internet explorer 10
+
+BONO ADICIONAL
+      -Podemos reordenar los hijos flexibles con la propiedad order
+      -Todos los elementos hijos tienen el orden de 0 cero
+      Por defecto order:0;
+	El orden va de menor a mayor -1 0 0 1
+	Tambien se puede usar valor negativo order:-1;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Ejercicio</title>
+    <style>
+        section{
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: row;   /* Tiene dos ejes por defecto es el eje horizontal (ROW), secundario es de forma vertical (COLUMN)  */  
+            flex-wrap: wrap;       /*  Podemos permitir el salto de columnas */
+            justify-content: flex-start; /*  Alineamos los elmentos (hijos) en el eje principal */
+            align-items: stretch;    /*  Alineamos los elementos (hijos) en el eje secundario */
+        }
+
+        .caja1{
+            background: blue;
+            /* height: 150px; */
+            /* flex-grow: 1;
+            flex-basis: 0; */
+
+            /* resumir las propiedade */
+            flex: 1 1 0px;
+        }
+        .caja2{
+            background: green;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        .caja3{
+            background: pink;
+            align-self: stretch; /* Podemos alinear los elementos (Hijos) de forma individual en el eje secundario */
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        .caja4{
+            background: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <article class="caja1">Caja 1 Caja Caja Caja</article>
+        <article class="caja2">Caja 2 Caja Caja</article>
+        <article class="caja3">Caja 3</article>
+        <article class="caja4">Caja 4</article>
+    </section>
+</body>
+</html>

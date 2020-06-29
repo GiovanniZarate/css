@@ -1,0 +1,77 @@
+body{
+
+    /* definir variables */
+    --rojo: red;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* ESTA ES LA CAJA CONTENEDORA - PARA CONTENER FLEXBOX SI O SI REQUIERE DE UNA CAJA CONTENEDORA */
+
+/*     display: inline-flex;  se ajusta al contenido
+ */
+#layout{
+    display: flex; 
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+
+    /* para alinear horizontalmente */
+    justify-content: space-around;
+
+
+    height: 600px;
+
+    /* para alinear verticalmente */
+    align-items: flex-start;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+/* LAS CAJAS CONTENIDAS */
+.caja{
+    /*  flex-grow: 1;  */        
+    /* flex-basis: calc((100% / 3) - 68px); */
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background: gray;
+}
+
+.red{
+    /* order: 4; */
+  /*   flex-grow: 7; */
+
+    /* flex-basis: calc(100% / 3); */
+    background: var(--rojo);
+}
+.green{
+   /*  order:2; */
+  /*   flex-grow: 7; */
+
+   /* flex-basis: calc((100% / 3) - 80px); */
+    background: green;
+}
+.blue{
+   /*  order: 1; */
+   /* flex-grow: 0;
+   flex-shrink: 0; */
+
+   /* flex-basis: calc(100% / 3); */
+    background: blue;
+}
+.orange{
+  /*   order: 3; */
+   /*  flex-grow: 7; */
+
+   /*  flex-basis: 100%; */
+    background: orange;
+}

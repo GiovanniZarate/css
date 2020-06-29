@@ -1,0 +1,111 @@
+/**##########LOS ESTILOS SE LEEN DE ARRIBA - ABJAO····/
+
+/* SELECTORES = ELEGIR ELEMENTO HTML Y DARLE ESTILOEtiqueta, ID, CLASES*/
+
+/* Selector Universal - Aplicar estilos en general
+ a todas las etiquetas y elementos de la pagina web
+*
+*/
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   /*  margin: 0px;
+    padding: 0px; */
+}
+
+/* SELECTOR DE ETIQUETA =
+PERMITE CUALQUIER ELEMENTO CON ETIQUETA DE LA PAGINA*/
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+/*selector compuesto dentro de footer etiqueta a*/
+footer a{
+    color: red;
+}
+
+/* SELECTOR DE IDENTIFICADOR */
+#descripcion,
+#titulo
+{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#titulo{
+    background: blue;
+    border: 2px dashed white;
+}
+
+/* SELECTOR DE CLASE */
+/* similar al de id pero para multiples elementos
+para poner clase a varios  */
+.parrafo{
+    font-style: italic;
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+.parrafo1, .parrafo3{
+    background-color: green;
+    color: white;
+    padding: 10px;    
+}
+.parrafo3{
+    background-color: orange;
+    color: black;
+}
+/* SELECTOR DE ATRIBUTO */
+/* permite seleccionar elementos de la web en base
+a un atributo se usa mas en los formularios. */
+#usuario form{
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#usuario form *{
+    display: block;
+}
+
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* SELECTORES HIJOS */
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/*PRIORIDADES EN CSS*/
+/*Darle mas prioridad a los que están mas abajos
+la ultima tiene mas prioridad
+*/
+#saludo h1{
+    background: brown;
+}
+
+h1{
+    background: purple !important;
+}

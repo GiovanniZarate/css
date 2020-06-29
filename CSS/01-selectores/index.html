@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master en CSS</title>
+    <!-- OTRA FORMA DE AGREGAR ESTILO ES LA ETIQUETA STYLE - SE AGREAG EN EL HEAD NORMALMENT -->
+    <!-- ESTA FORMA TAMPOCO ES TAN RECOMENDADO - MEJOR CREAR UN ARCHIVO CSS APARTE -->
+<!--     <style>
+       /*  h1{
+            color: brown;
+            font-size: 50px;
+            text-decoration: underline;
+        } */
+    </style> -->
+
+    <!-- MEJOR FORMA DE AÑADIR ARCHIVO CSS A NUESTRA PAGINA WEB -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1 style="color: brown; font-size: 32px;">Master en CSS</h1> ESTO ES UNA MALA PRACTICA -->
+    <h1 id="titulo">Master en CSS</h1>
+    <ul id="menu">        
+        <li><a href="#">Inicio</a></li>
+        <li>
+            <a href="#">Temario</a>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">LESS</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Reseñas</a></li>
+        <li><a href="#">Contacta</a></li>
+    </ul>
+    <div id="descripcion">
+        <h2>Descripción del Curso</h2>
+        <p class="parrafo parrafo1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quo facilis autem deserunt, alias aperiam ipsa quos delectus reprehenderit velit est tempore, optio natus corporis blanditiis labore et, incidunt perspiciatis.
+        </p>
+        <p class="parrafo parrafo2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus voluptate quibusdam porro quas harum unde. Illum hic, voluptates eos fuga, pariatur impedit dolore corporis provident beatae exercitationem, dolorum assumenda.
+        </p>
+        <p class="parrafo parrafo3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, laboriosam veritatis. Ab dicta beatae quo ipsam quasi qui vitae molestias, voluptate nesciunt blanditiis sunt quas incidunt fuga earum expedita corporis.
+        </p>
+    </div>
+    <div id="usuario">
+        <form action="#">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido">
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div id="saludo">
+        <h1>
+            Hola soy Giovani Zarate
+        </h1>
+    </div>
+    <footer>
+        Todos los derechos reservados &copy; <a href="www.google.com">Giovannizarate.com.py</a>
+    </footer>
+</body>
+</html>

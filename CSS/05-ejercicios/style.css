@@ -1,0 +1,195 @@
+/*Ejercicio completo con html y css
+1- crear un documento html y vincularlo con un css
+
+
+2- crear una estructura html que cuente con un 
+Contenedor General,                                         un div
+Cabecera,                                                   un headear
+Menu,                                                       un nav - dentro ul y li
+barra lateral,                                              un sidebar
+Seccion de contenido principal,                             un section 
+elementos dentro del contenedor principal,                  un varios div o article
+y footer                                                    un footer
+
+
+
+3- todo el contenido de estar dentro del contenedor genral y su ancho sera 1200pxy estar centrado.
+
+
+4- header debe ocupar el 100% del ancho y tneer un texto grande centrado
+5- Menu debe tener los elementos uno al lado del otro
+6- El contenido principal debe tener un ancho del 70%
+7- El contenido dentro del contenedor principal debe ser una cuadricula con 4 lineas de 2 cajas.
+8- La barra lateral debe tener un ancho del 30%
+9- El footer debe tener un ancho del 100% del div que lo contiene y estar abajo de todo
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 3- todo el contenido de estar dentro del contenedor genral y su ancho sera 1200pxy estar centrado. */
+#general{
+    width: 1200px;
+    margin: 0px auto; /* centrar en la pagina */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 4- header debe ocupar el 100% del ancho y tneer un texto grande centrado */
+#header{
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 162, 255, 0.74);
+    color: white;
+    text-align: center;
+    line-height: 80px; /* centrar horizonatalmente */
+}
+
+/* 5- Menu debe tener los elementos uno al lado del otro */
+.clearfix{
+    float: none;    
+    clear: both;
+}
+
+#menu{
+    background-color: #eeeeee;
+}
+
+#menu ul li {
+    /* una opcion  */
+    /* display: inline-block; */
+    display: block;
+    float: left;    
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li a{
+    display: block;
+    padding: 15px;
+    color: #444;
+}
+#menu ul li:hover{
+    background: rgba(0, 162, 255, 0.808);
+    cursor: pointer;
+}
+
+#menu ul li:hover a{
+    color: white;
+}
+
+/* 6- El contenido principal debe tener un ancho del 70% */
+
+#contenido{
+    width: 69%;    
+    float: left;
+}
+
+/* 8- La barra lateral debe tener un ancho del 30% */
+#lateral{
+    float: left;
+    width: 30%;
+    min-height: 500px;
+    max-height: 250px;
+    text-align: center;
+    border: 1px solid red;
+    /* si no entra todo  dentro de la caja  para limitar */
+    overflow-y: scroll;
+}
+
+
+/* 7- El contenido dentro del contenedor principal debe ser una cuadricula con 4 lineas de 2 cajas. */
+#contenido > h1 {
+    text-align: center;    
+    padding: 15px;
+    color: #444;
+
+    /* para sombras */
+    text-shadow: 1px 1px 3px gray;
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    border: 1px solid gray;
+    color: white;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 200px;
+    color: blue;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 10px grey;
+
+    /* borde redondeado */
+    border-radius: 50px 10px 4px 60px;
+
+    /* POSICION ABSOLUTA */
+    position: relative;
+}
+
+.sombra-interior{
+    box-shadow: 0px 0px 20px gray inset !important;
+}
+
+/* 9- El footer debe tener un ancho del 100% del div que lo contiene y estar abajo de todo */
+
+footer{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+}
+
+
+.libre{
+
+ /* posicion absoluta para mover como quira de forma libre */
+ position: absolute;
+ top: 300px;
+ left: 50%;
+ 
+
+
+  border: 1px solid black;  
+  background-color: red ;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+}
+
+.libre1{
+   z-index: 2;
+}
+
+.libre2{
+    background-color: green;
+    top: 280px;
+    left: 51%;
+    z-index: 1;
+}
+
+.fija{
+    /* posicion fija  tambien se puede mover como quiera pero se mantiene siempre al mismo lugar no se mueve*/
+    position: fixed;
+    top: 50%;
+    left: 0px;
+ 
+
+
+  border: 1px solid black;  
+  background-color: blue ;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+}
